@@ -220,10 +220,15 @@ let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 "#Base###################
 " theme
 set t_Co=256
-set background=dark
 "colorscheme molokai
 colorscheme solarized
-let g:airline_theme='solarized'
+if $THEME == "light"
+        set background=light
+        let g:airline_theme="solarized"
+else
+        set background=dark
+        let g:airline_theme="solarized"
+endif
 
 " normal
 set nocompatible	" 오리지날 VI와 호환하지 않음
